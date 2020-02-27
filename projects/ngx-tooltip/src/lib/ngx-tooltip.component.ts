@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
 
 @Component({
   selector: 'lib-ngx-tooltip',
-  template: `
-    <p>
-      ngx-tooltip works!
-    </p>
-  `,
-  styles: []
+  templateUrl: './ngx-tooltip.component.html',
+  styleUrls: ['./ngx-tooltip.component.css']
 })
 export class NgxTooltipComponent implements OnInit {
+
+  @Input()
+  message: string;
 
   constructor() { }
 
